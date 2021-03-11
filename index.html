@@ -18,7 +18,7 @@
     <header>
         <div class="header container">
             <h1>Bibliothek Simplon</h1>
-            <nav>
+            <nav class="nav-desktop">
                 <ul id="navlist">
                     <li><a href="#home" class="nav-items nav-item-active">Home</a></li>
                     <li><a href="#angebot" class="nav-items">Angebot</a></li>
@@ -27,8 +27,16 @@
                     <li><a href="#" class="btn">Login</a></li>
                 </ul>
             </nav>
+            <div id="mobileMenu-btn" onclick="toggleMenu()"><img src="./img/menu_btn.png" alt=""></div>
         </div>
     </header>
+    <nav id="mobileMenu" class="hidden">
+        <li><a href="#home" class="nav-items" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#angebot" class="nav-items" onclick="toggleMenu()">Angebot</a></li>
+        <li><a href="#team" class="nav-items" onclick="toggleMenu()">Team</a></li>
+        <li><a href="#kontakt" class="nav-items" onclick="toggleMenu()">Kontakt</a></li>
+        <li><a href="#" class="btn" onclick="toggleMenu()">Login</a></li>
+    </nav>
 
     <main>
         <section id="home" class="home subpage flex-center">
@@ -97,7 +105,9 @@
 
         <section id="kontakt" class="kontakt">
             <div class="kontakt-container">
-                <div class="kontakt-title"><h2>Kontakt</h2></div>
+                <div class="kontakt-title">
+                    <h2>Kontakt</h2>
+                </div>
                 <div class="kontakt-container-info">
                     <i class="fa fa-map-marker" aria-hidden="true"> Simplon Pass</i>
                     <i class="fas fa-phone-square"> 056 636 36 36</i>
@@ -109,9 +119,7 @@
     </main>
     <script type="text/javascript">
         // Get all nav items
-        const listContainer = document.getElementById("navlist");
-        console.log(listContainer);
-        let navItems = document.querySelectorAll('nav a');
+        let navItems = document.querySelectorAll('nav ul a');
         console.log(navItems);
         console.log(typeof (navItems));
         // Loop through the navItems and add the active class to the current/clicked navItem
@@ -122,6 +130,13 @@
                 this.className += " nav-item-active";
             });
         });
+    </script>
+    <script type="text/javascript">
+        function toggleMenu() {
+            let menu = document.getElementById("mobileMenu");
+            console.log(menu);
+            menu.classList.toggle("hidden");
+        }
     </script>
 </body>
 

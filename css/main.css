@@ -16,7 +16,7 @@ a {
     text-decoration: none;
     color: black;
 }
-ul, ol {
+ul, ol, li {
     list-style: none;
 }
 /* END RESET */
@@ -46,6 +46,9 @@ body {
 .btn:hover {
     color: black;
     background-color: khaki;
+}
+.hidden {
+    display: none;
 }
 /* END GENERIC */
 
@@ -89,6 +92,28 @@ nav ul li a:hover {
     font-weight: regular;
     color: black;
     border-bottom: khaki 0.2rem solid;
+}
+#mobileMenu {
+    padding: 6rem;
+    position: absolute;s
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    text-align: center;
+    z-index: 1000;
+}
+#mobileMenu li {
+    padding: 2rem;
+}
+#mobileMenu a {
+    font-size: 2rem;
+}
+#mobileMenu-btn {
+    display: none;
+    width: 4rem;
+}
+#mobileMenu-btn img {
+    width: 100%;
 }
 /* END HEADER */
 
@@ -164,6 +189,7 @@ nav ul li a:hover {
     object-fit: cover;
     height: 25rem;
     width: 25rem;
+    max-width: 100%;
     border-radius: 2rem;
     margin-bottom: 1rem;
 }
@@ -217,6 +243,23 @@ nav ul li a:hover {
     html { 
       font-size: 10px;
     }
+    a, p{
+        font-size: 1.2rem;
+    }
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+    .header {
+        padding: 1rem;
+    }
+    .nav-desktop {
+        display: none;
+    }
+    #mobileMenu-btn {
+        display: block;
+    }
+    
     /**/
     .angebot-container {
         grid-template-columns: none;
