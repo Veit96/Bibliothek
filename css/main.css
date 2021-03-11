@@ -1,0 +1,240 @@
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Shippori Mincho B1', serif;
+*/
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul, ol {
+    list-style: none;
+}
+/* END RESET */
+
+/* GENERIC */
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: whitesmoke;
+}
+.container {
+    width: 80%;
+    max-width: 100em;
+    margin: auto;
+}
+.subpage {
+    position: relative;
+    height: 100vh;
+    padding-top: 13.5vh;
+    display: flex;
+}
+.placeholder {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 400;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.btn {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: khaki 0.2em solid;
+    border-radius: 0.3em;
+    padding: 0.3em 0.8em;
+}
+.btn:hover {
+    color: black;
+    background-color: khaki;
+}
+/* END GENERIC */
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    z-index: 100;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* content means all columns */
+    align-items: center; /* items means each item in one row */
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+.header h1 {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 3em;
+    border-right: khaki 0.4rem solid;
+}
+nav ul {
+    font-weight: light;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    margin-left: 2em;
+}
+nav ul li a {
+    color: gray;
+}
+nav ul li a:hover {
+    color: black;
+    border-bottom: khaki 0.2rem solid;
+}
+.nav-item-active {
+    font-weight: regular;
+    color: black;
+    border-bottom: khaki 0.2rem solid;
+}
+/* END HEADER */
+
+/* HOME */
+.home {
+    background-image: url(../img/banner_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2em 1.5em;
+    background-color: rgba(245, 245, 245, 0.9);
+}
+/* END HOME */
+
+/* ANGEBOT */
+.angebot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+#grid_ol, #grid_ur {
+    background-color: khaki;
+}
+#grid_or, #grid_ul {
+    background-color: #ddd;
+}
+.angebot-grid-item {
+    overflow: scroll;
+    padding: 4em 3em 2em;
+}
+.angebot h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+.angebot p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+/* END ANGEBOT */
+
+/* TEAM */
+.team-container {
+    display: flex;
+    justify-content: center;
+}
+.team-container-item {
+    text-align: center;
+    display: inline-block;
+    padding: 3em;
+    margin: 1.5em;
+}
+.headshot img {
+    object-fit: cover;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+.team-container-item h4.name {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.team-container-item p.description {
+    font-size: 1.2rem;
+}
+/* END TEAM */
+
+/* KONTAKT */
+.kontakt {
+    background-color: khaki;
+    font-size: 2rem;
+}
+.kontakt-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.kontakt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kontakt-container h2 {
+    font-size: 3rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-family: 'Shippori Mincho B1', serif;
+}
+.kontakt-container-info {
+    border-left: black 0.5rem solid;
+    margin: 10rem 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* END KONTAKT */
+
+
+/* SMARTPHONE */
+@media only screen and (max-width: 768px) {
+    html {
+      font-size: 10px;
+    }
+    /**/
+    .angebot-grid {
+        grid-template-columns: none;
+    }
+    /**/
+    .team-container {
+        flex-direction: column;
+    }
+    /**/
+    .kontakt-container {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+    }
+    .kontakt-container-info {
+        border-left: none
+    }
+}
+/* END SMARTPHONE */ 

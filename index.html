@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Shippori+Mincho+B1:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Bibliothek Simplon</title>
+</head>
+
+<body>
+    <header>
+        <div class="header container">
+            <h1>Bibliothek Simplon</h1>
+            <nav>
+                <ul id="navlist">
+                    <li><a href="#home" class="nav-items nav-item-active">Home</a></li>
+                    <li><a href="#angebot" class="nav-items">Angebot</a></li>
+                    <li><a href="#team" class="nav-items">Team</a></li>
+                    <li><a href="#kontakt" class="nav-items">Kontakt</a></li>
+                    <li><a href="#" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home subpage flex-center">
+            <div class="flex-center banner">
+                Unsere Bücher warten auf Sie!
+            </div>
+        </section>
+
+        <section id="angebot" class="angebot subpage">
+            <div class="angebot-grid container">
+                <div id="grid_ol" class="angebot-grid-item">
+                    <h3>Ausleihe</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Viverra maecenas accumsan lacus vel facilisis volutpat. Congue
+                        mauris rhoncus aenean vel elit scelerisque mauris. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada. In cursus turpis massa tincidunt dui.</p>
+                </div>
+                <div id="grid_or" class="angebot-grid-item">
+                    <h3>Bestellung</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque
+                        purus semper. Massa placerat duis ultricies lacus sed turpis. Enim nulla aliquet porttitor
+                        lacus. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Bibendum at varius vel
+                        pharetra vel turpis.</p>
+                </div>
+                <div id="grid_ul" class="angebot-grid-item">
+                    <h3>Beratung</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. In
+                        nibh mauris cursus mattis molestie a iaculis at erat. Consequat interdum varius sit amet mattis
+                        vulputate enim nulla. Viverra maecenas accumsan lacus vel facilisis volutpat est. Sem fringilla
+                        ut morbi tincidunt augue interdum velit euismod in.</p>
+                </div>
+                <div id="grid_ur" class="angebot-grid-item">
+                    <h3>Vorlesung</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. At lectus urna duis convallis convallis tellus id interdum velit.
+                        Purus gravida quis blandit turpis. Ultricies integer quis auctor elit sed vulputate mi sit amet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team subpage">
+            <div class="team-container container">
+                <div class="team-container-item">
+                    <div class="headshot"><img src="./img/head1.jpg" alt=""></div>
+                    <h4 class="name">Killian</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="team-container-item">
+                    <div class="headshot"><img src="./img/head2.jpg" alt=""></div>
+                    <h4 class="name">Dorothe</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="team-container-item">
+                    <div class="headshot"><img src="./img/head3.jpg" alt=""></div>
+                    <h4 class="name">Sarah</h4>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="kontakt subpage">
+            <div class="kontakt-container">
+                <div class="kontakt-title"><h2>Kontakt</h2></div>
+                <div class="kontakt-container-info">
+                    <i class="fa fa-map-marker" aria-hidden="true"> Simplon Pass</i>
+                    <i class="fas fa-phone-square"> 056 636 36 36</i>
+                    <i class="fas fa-mobile-alt"> 079 777 77 77</i>
+                    <i class="fa fa-at" aria-hidden="true"> info@biblio.ch</i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript">
+        // Get all nav items
+        const listContainer = document.getElementById("navlist");
+        console.log(listContainer);
+        let navItems = document.querySelectorAll('nav a');
+        console.log(navItems);
+        console.log(typeof (navItems));
+        // Loop through the navItems and add the active class to the current/clicked navItem
+        navItems.forEach(navItem => {
+            navItem.addEventListener("click", function () {
+                let current = document.getElementsByClassName("nav-item-active");
+                current[0].className = current[0].className.replace(" nav-item-active", "");
+                this.className += " nav-item-active";
+            });
+        });
+    </script>
+</body>
+
+</html>
