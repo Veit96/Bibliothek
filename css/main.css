@@ -35,19 +35,6 @@ body {
     max-width: 100em;
     margin: auto;
 }
-.subpage {
-    position: relative;
-    height: 100vh;
-    padding-top: 13.5vh;
-    display: flex;
-}
-.placeholder {
-    font-family: 'Shippori Mincho B1', serif;
-    font-weight: 400;
-    font-size: 5rem;
-    text-align: center;
-    text-transform: capitalize;
-}
 .btn {
     font-size: 1.2rem;
     font-weight: 700;
@@ -112,6 +99,7 @@ nav ul li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    height: 100vh;
 }
 .flex-center {
     display: flex;
@@ -129,7 +117,10 @@ nav ul li a:hover {
 /* END HOME */
 
 /* ANGEBOT */
-.angebot-grid {
+.angebot {
+    padding-top: 10em;
+}
+.angebot-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
@@ -156,6 +147,9 @@ nav ul li a:hover {
 /* END ANGEBOT */
 
 /* TEAM */
+.team {
+    padding: 10em 0;
+}
 .team-container {
     display: flex;
     justify-content: center;
@@ -186,9 +180,10 @@ nav ul li a:hover {
 .kontakt {
     background-color: khaki;
     font-size: 2rem;
+    width: 100%;
+    padding: 3em 0;
 }
 .kontakt-container {
-    width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -205,23 +200,25 @@ nav ul li a:hover {
 }
 .kontakt-container-info {
     border-left: black 0.5rem solid;
-    margin: 10rem 0;
-    padding: 3rem;
+    padding: 3rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.kontakt-container-info i {
+    margin: 0.5em 0;
 }
 /* END KONTAKT */
 
 
 /* SMARTPHONE */
 @media only screen and (max-width: 768px) {
-    html {
+    html { 
       font-size: 10px;
     }
     /**/
-    .angebot-grid {
+    .angebot-container {
         grid-template-columns: none;
     }
     /**/
